@@ -190,7 +190,7 @@ def main():
     opt = parser.parse_args()
 
     # default device is CUDA
-    opt.device = torch.device('cuda')
+    opt.device = torch.device('cpu')
 
     # setup the log file
     with open(opt.log, 'w') as f:
