@@ -41,6 +41,11 @@ def train_epoch(model, training_data, optimizer, pred_loss_func, opt):
 
     model.train()
 
+    # Initialize learnable weights for the losses
+    event_loss_weight = nn.Parameter(torch.tensor(1.0, requires_grad=True))
+    pred_loss_weight = nn.Parameter(torch.tensor(1.0, requires_grad=True))
+    time_loss_weight = nn.Parameter(torch.tensor(1.0, requires_grad=True))
+
     total_event_ll = 0  # cumulative event log-likelihood
     total_time_se = 0  # cumulative time prediction squared-error
     total_event_rate = 0  # cumulative number of correct prediction
@@ -59,18 +64,26 @@ def train_epoch(model, training_data, optimizer, pred_loss_func, opt):
         """ backward """
         # negative log-likelihood
         event_ll, non_event_ll = Utils.log_likelihood(model, enc_out, event_time, event_type)
-        event_loss = -torch.sum(event_ll - non_event_ll)
+        # event_loss = -torch.sum(event_ll - non_event_ll)
+        event_loss = -(event_ll - non_event_ll).sum() * event_loss_weight
 
         # type prediction
         pred_loss, pred_num_event = Utils.type_loss(prediction[0], event_type, pred_loss_func)
+        pred_loss = pred_loss * pred_loss_weight
 
         # time prediction
         se = Utils.time_loss(prediction[1], event_time)
+        time_loss = se * time_loss_weight
 
         # SE is usually large, scale it to stabilize training
         scale_time_loss = 100
-        loss = event_loss + pred_loss + se / scale_time_loss
+        loss = event_loss + pred_loss + time_loss / scale_time_loss
         loss.backward()
+
+        # Update the learnable weights
+        event_loss_weight.grad *= opt.event_loss_weight_decay
+        pred_loss_weight.grad *= opt.pred_loss_weight_decay
+        time_loss_weight.grad *= opt.time_loss_weight_decay
 
         """ update parameters """
         optimizer.step()

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="437c8640-f8d2-40f0-a561-8fe0f696f4a6" name="Changes" comment="Add utils functions and implement the main architecture of the Markovian THP">
       <change afterPath="$PROJECT_DIR$/data.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/transformer/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/transformer/Models.py" afterDir="false" />
     </list>
@@ -81,7 +80,7 @@
       <workItem from="1714949183801" duration="14073000" />
       <workItem from="1715027698942" duration="995000" />
       <workItem from="1715051705034" duration="7776000" />
-      <workItem from="1715232480941" duration="730000" />
+      <workItem from="1715232480941" duration="2974000" />
     </task>
     <task id="LOCAL-00001" summary="Add utils functions and implement the main architecture of the Markovian THP">
       <option name="closed" value="true" />
@@ -107,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715168391700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add utils functions and implement the main architecture of the Markovian THP">
+      <option name="closed" value="true" />
+      <created>1715236397118</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715236397118</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

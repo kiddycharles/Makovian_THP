@@ -41,7 +41,7 @@ class Encoder(nn.Module):
     def __init__(
             self,
             num_types, d_model, d_inner,
-            n_layers, n_head, d_k, d_v, dropout):
+            n_layers, n_head, d_k, d_v, dropout, device=torch.device('cuda')):
         super().__init__()
 
         self.d_model = d_model
@@ -49,7 +49,7 @@ class Encoder(nn.Module):
         # position vector, used for temporal encoding
         self.position_vec = torch.tensor(
             [math.pow(10000.0, 2.0 * (i // 2) / d_model) for i in range(d_model)],
-            device=torch.device('mps'))
+            device=device)
 
         # event type embedding
         self.event_emb = nn.Embedding(num_types + 1, d_model, padding_idx=Constants.PAD)
