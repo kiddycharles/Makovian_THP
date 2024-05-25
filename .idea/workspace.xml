@@ -5,9 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437c8640-f8d2-40f0-a561-8fe0f696f4a6" name="Changes" comment="Add utils functions and implement the main architecture of the Markovian THP">
-      <change afterPath="$PROJECT_DIR$/data.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transformer/Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/transformer/Models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/attn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/decoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/embed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/utils/masking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/utils/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/utils/timefeatures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/utils/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold1/dev.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold1/test.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold1/train.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold2/dev.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold2/test.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold2/train.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold3/dev.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold3/test.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold3/train.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold4/dev.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold4/test.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold4/train.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold5/dev.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold5/test.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bookorder/fold5/train.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess/Dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transformer/Constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transformer/Layers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transformer/Models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transformer/Modules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transformer/SubLayers.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +74,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/run.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/run.sh" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -49,7 +86,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.Markovian_RNN.executor&quot;: &quot;Run&quot;,
     &quot;Python.Models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.unused_layer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -60,11 +99,65 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="Python.Markovian_RNN">
+    <configuration name="Markovian_RNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Markovian_THP" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Markovian_RNN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="unused_layer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Markovian_THP" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unused_layer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Markovian_RNN" />
+        <item itemvalue="Python.unused_layer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -80,7 +173,11 @@
       <workItem from="1714949183801" duration="14073000" />
       <workItem from="1715027698942" duration="995000" />
       <workItem from="1715051705034" duration="7776000" />
-      <workItem from="1715232480941" duration="2974000" />
+      <workItem from="1715232480941" duration="13925000" />
+      <workItem from="1715350437411" duration="163000" />
+      <workItem from="1716518541225" duration="17000" />
+      <workItem from="1716518561483" duration="2911000" />
+      <workItem from="1716611255380" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="Add utils functions and implement the main architecture of the Markovian THP">
       <option name="closed" value="true" />
@@ -114,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715236397118</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add utils functions and implement the main architecture of the Markovian THP">
+      <option name="closed" value="true" />
+      <created>1715301092679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715301092679</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +241,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add utils functions and implement the main architecture of the Markovian THP" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Markovian_THP$Markovian_RNN.coverage" NAME="Markovian_RNN Coverage Results" MODIFIED="1716567568197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Markovian_THP$Models.coverage" NAME="Models Coverage Results" MODIFIED="1715168137489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/transformer" />
+    <SUITE FILE_PATH="coverage/Markovian_THP$unused_layer.coverage" NAME="unused_layer Coverage Results" MODIFIED="1715344531666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
