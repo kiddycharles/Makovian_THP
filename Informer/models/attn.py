@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from utils.masking import TriangularCausalMask, ProbMask
+from Informer.utils.masking import TriangularCausalMask, ProbMask
 
 
 class FullAttention(nn.Module):
