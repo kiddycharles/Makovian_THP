@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 
-from attn import FullAttention, ProbAttention, AttentionLayer
-from decoder import Decoder, DecoderLayer
-from embed import DataEmbedding
-from encoder import Encoder, EncoderLayer, ConvLayer, EncoderStack
+from Informer.models.attn import FullAttention, ProbAttention, AttentionLayer
+from Informer.models.decoder import Decoder, DecoderLayer
+from Informer.models.embed import DataEmbedding
+from Informer.models.encoder import Encoder, EncoderLayer, ConvLayer, EncoderStack
 
 
 class Informer(nn.Module):

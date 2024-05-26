@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437c8640-f8d2-40f0-a561-8fe0f696f4a6" name="Changes" comment="Add Informer for visualizing the attention on each &quot;token&quot;">
-      <change afterPath="$PROJECT_DIR$/Informer/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informer/data/data_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informer/exp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informer/exp/exp_basic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informer/exp/exp_informer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Informer/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/equities/stocks/^IXIC.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Informer/main_informer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informer/attn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/attn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informer/decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informer/embed.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/embed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informer/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Informer/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Informer/data/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/data/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Informer/exp/exp_informer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/exp/exp_informer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Informer/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Informer/models/model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Markovian_RNN.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.unused_layer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Markovian_RNN.executor": "Run",
+    "Python.Models.executor": "Run",
+    "Python.main_informer.executor": "Run",
+    "Python.unused_layer.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.nasdaq.sh.executor": "Run",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.Markovian_RNN">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Informer/equities/stocks" />
+      <recent name="$PROJECT_DIR$/Informer/equities" />
+      <recent name="$PROJECT_DIR$/Informer/models" />
+      <recent name="$PROJECT_DIR$/Informer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main_informer">
     <configuration name="Markovian_RNN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Markovian_THP" />
       <option name="ENV_FILES" value="" />
@@ -88,6 +92,29 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Markovian_RNN.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_informer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Markovian_THP" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Informer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Informer/main_informer.py" />
+      <option name="PARAMETERS" value="--model informer --data ^IXIC --features M --attn prob --d_layers 1 --e_layers 2 --itr 3 --label_len 96 --pred_len 48 --seq_len 96 --des 'Exp'" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -118,8 +145,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main_informer" />
+      <item itemvalue="Python.Markovian_RNN" />
+      <item itemvalue="Python.unused_layer" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main_informer" />
         <item itemvalue="Python.Markovian_RNN" />
         <item itemvalue="Python.unused_layer" />
       </list>
@@ -149,7 +182,7 @@
       <workItem from="1715350437411" duration="163000" />
       <workItem from="1716518541225" duration="17000" />
       <workItem from="1716518561483" duration="2911000" />
-      <workItem from="1716611255380" duration="3024000" />
+      <workItem from="1716611255380" duration="17175000" />
     </task>
     <task id="LOCAL-00001" summary="Add utils functions and implement the main architecture of the Markovian THP">
       <option name="closed" value="true" />
@@ -199,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716619504114</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Informer for visualizing the attention on each &quot;token&quot;">
+      <option name="closed" value="true" />
+      <created>1716621800727</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716621800727</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +263,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add Informer for visualizing the attention on each &quot;token&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Markovian_THP$main_informer.coverage" NAME="main_informer Coverage Results" MODIFIED="1716627652295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Informer" />
     <SUITE FILE_PATH="coverage/Markovian_THP$Markovian_RNN.coverage" NAME="Markovian_RNN Coverage Results" MODIFIED="1716567568197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Markovian_THP$Models.coverage" NAME="Models Coverage Results" MODIFIED="1715168137489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/transformer" />
     <SUITE FILE_PATH="coverage/Markovian_THP$unused_layer.coverage" NAME="unused_layer Coverage Results" MODIFIED="1715344531666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

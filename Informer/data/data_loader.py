@@ -191,8 +191,8 @@ class Dataset_ETT_minute(Dataset):
 
 class Dataset_Custom(Dataset):
     def __init__(self, root_path, flag='train', size=None,
-                 features='S', data_path='ETTh1.csv',
-                 target='OT', scale=True, inverse=False, timeenc=0, freq='h', cols=None):
+                 features='S', data_path='^IXIC.csv',
+                 target='Adj Close', scale=True, inverse=False, timeenc=0, freq='', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
         if size == None:
@@ -231,8 +231,8 @@ class Dataset_Custom(Dataset):
             cols = self.cols.copy()
             cols.remove(self.target)
         else:
-            cols = list(df_raw.columns);
-            cols.remove(self.target);
+            cols = list(df_raw.columns)
+            cols.remove(self.target)
             cols.remove('date')
         df_raw = df_raw[['date'] + cols + [self.target]]
 
